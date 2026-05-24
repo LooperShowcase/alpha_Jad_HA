@@ -1,0 +1,131 @@
+/* ==========================================
+   1. GLOBAL STYLES & TYPOGRAPHY
+   ========================================== */
+body {
+  background-color: rgb(67, 67, 67);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  color: white;
+}
+
+/* Ensure padding and borders don't break element widths */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ==========================================
+   2. LAYOUT & CONTAINERS (Responsive)
+   ========================================== */
+div {
+  background-color: rgb(39, 138, 200);
+  /* Use a scalable border-radius so it doesn't distort tiny mobile divs */
+  border-radius: 40px; 
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 1200px; /* Prevents containers from stretching too wide on massive screens */
+  width: 90%;        /* Allows containers to shrink fluidly on mobile */
+}
+
+/* Specific BMW Section Colors */
+#BMWimgdiv { background-color: rgb(255, 255, 255); }
+#BMWVIDDIV { background-color: rgb(0, 0, 0); }
+#BMW7SERIESDIV { background-color: rgb(0, 0, 0); }
+#BMWmodel { background-color: rgb(39, 138, 200); }
+#BMWM4 { background-color: rgb(0, 0, 0); }
+#BMW7IMG { background-color: rgb(255, 255, 255); }
+
+/* ==========================================
+   3. NAVIGATION BAR (Desktop First)
+   ========================================== */
+.navbar {
+  background-color: #111111; /* Sleek dark background */
+  font-family: 'Arial', sans-serif;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Reset global div rules for the navbar container */
+  border-radius: 0; 
+  max-width: 100%;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centers the links */
+  gap: 40px; /* Spacing between links */
+}
+
+.navbar li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+.navbar li a:hover {
+  background-color: #0066cc; /* BMW Iconic Blue */
+  color: #ffffff;
+}
+
+/* ==========================================
+   4. MEDIA QUERIES (Responsiveness rules)
+   ========================================== */
+
+/* Tablets & Medium Screens (e.g., iPads) */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    gap: 20px; /* Reduces link gap so they don't wrap prematurely */
+  }
+  
+  .navbar li a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  div {
+    border-radius: 30px; /* Softer corners on smaller screens */
+    width: 95%;          /* Uses more screen estate */
+  }
+}
+
+/* Mobile Devices (e.g., iPhones, Androids) */
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stacks navigation links vertically */
+    align-items: center;
+    gap: 12px; 
+  }
+
+  .navbar li a {
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  div {
+    border-radius: 20px; /* Mobile-friendly corner radius */
+    padding: 15px;
+    width: 95%;
+  }
+}
