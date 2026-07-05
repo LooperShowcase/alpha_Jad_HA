@@ -37,6 +37,18 @@ div {
 #BMWmodel { background-color: rgb(39, 138, 200); }
 #BMWM4 { background-color: rgb(0, 0, 0); }
 #BMW7IMG { background-color: rgb(255, 255, 255); }
+#bmw-showcase {
+  background-color: black;
+  color: white;       
+  padding: 20px;       
+  border-radius: 40px;  
+}
+
+/* This targets the link and removes the browser's default styles */
+#bmw-showcase a {
+  color: inherit;          /* Forces the link to be white, matching the h2 text */
+  text-decoration: none;   /* Removes the line underneath the word */
+}
 
 /* ==========================================
    3. NAVIGATION BAR (Desktop First)
